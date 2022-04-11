@@ -17,15 +17,33 @@
     Done With It offers free user to user classifieds listings. <strong>Buy</strong> and <strong>Sell</strong>!
 </p>
 
+## Repository overview
+
+├── README.md
+├── app
+│ ├── assets
+│ ├── components
+│ ├── config
+│ └── screens
+├── .expo-shared
+│ ├── assets.json
+│ └── README.md
+├── App.js
+├── app.json
+├── babel.config.js
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+
 ## Application features
 
-- `11 Screens` - Welcome, Register, Login, Account, Upload, View Image, Messages, Message Edit, Listings, Listing Edit, and Listing Details Screens.
+- `Screens and reusable components` - Splash, Register, Login, Welcome, Account, Upload Listing, Listing Details and more. Button, Icon, Forms, Screen, Text, Text Input and more.
 
 - `Animation` - Using Lottie (Activity Indicator, done animation and more).
 
 - `Authentication` - User authentication (Register, Login/out) using `Jwt`.
 
-- `Verification` - Send verification email to verify user email using `nodemailer `
+- `Verification` - Send verification email to verify user email using `nodemailer`
 
 - `Real time application` - Send and receive data using `Socket.io`
 
@@ -40,35 +58,3 @@
 - `Navigation` - Using React Navigation and Stack Navigator.
 
 - `Push Notifications` - When messages are received.
-
-- `Reusable Components` - Button, Icon, Forms, Screen, Text, Text Input and more.
-
-- `Splash Screen` - Logo Screen Design while the app is launching.
-
-## Done
-
-<p>1- Login, Register,and logout users. ✅</p>
-<p>2- Show the list of Listings in feed. ✅</p>
-<p>3- User Account. ✅</p>
-<p>4- User profile and show his listings. ✅</p>
-<p>5- User messages. ✅</p>
-<p>6- Sort listing by date of post.  ✅   </p>
-<p>7- Make app real time application using socket.io (frontend, backed).✅</p>
-<p>8- Handle authentication using jwt.✅ </p>
-<p>9- Handle update and delete listings.✅</p>
-<p>10- Send verification email to user.✅</p>
-<p>11- Verify account after send verification email to user.✅</p>
-<p>12- Finish send, delete, and get messages in backend.✅</p>
-<p>13- Finish create, delete, and get chats in backend.✅</p>
-<p>14-  Delete chats from one side that delete chat and show to anther who didn't delete chat until he delete chat too.✅</p>
-<p>15- Create task run every 12 hours to delete deleted chats from DB.✅</p>
-<p>16- Message input screen, send , and display messages.✅</p>
-
-## Future
-
-<p>1- Handle update and delete listing image.❌ </p>
-<p>2- Forbidden delete listing image if there is only one.❌</p>
-<p>3- Handle (add, update, delete) multiple images for listings.❌</p>
-<p>4- Handle change user profile pic.❌</p>
-<p>5- Send message notification.❌</p>
-<p>6- Recommendation system.❌</p>
