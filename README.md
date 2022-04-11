@@ -19,21 +19,23 @@
 
 ## Repository overview
 
-├── README.md  
-├── app  
-│ ├── assets  
-│ ├── components  
-│ ├── config  
-│ └── screens  
-├── .expo-shared  
-│ ├── assets.json
-│ └── README.md
+```bash
+├── README.md
+├── app
+│   ├── assets
+│   ├── components
+│   ├── config
+│   └── screens
+├── .expo-shared
+│   ├── assets.json
+│   └── README.md
 ├── App.js
 ├── app.json
 ├── babel.config.js
 ├── package-lock.json
 ├── package.json
 └── tsconfig.json
+```
 
 ## Application features
 
