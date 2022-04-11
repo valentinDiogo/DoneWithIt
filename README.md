@@ -17,26 +17,6 @@
     Done With It offers free user to user classifieds listings. <strong>Buy</strong> and <strong>Sell</strong>!
 </p>
 
-## Repository overview
-
-```bash
-├── README.md
-├── app
-│   ├── assets
-│   ├── components
-│   ├── config
-│   └── screens
-├── .expo-shared
-│   ├── assets.json
-│   └── README.md
-├── App.js
-├── app.json
-├── babel.config.js
-├── package-lock.json
-├── package.json
-└── tsconfig.json
-```
-
 ## Application features
 
 - `Screens and reusable components` - Splash, Register, Login, Welcome, Account, Upload Listing, Listing Details and more. Button, Icon, Forms, Screen, Text, Text Input and more.
@@ -60,3 +40,23 @@
 - `Navigation` - Using React Navigation and Stack Navigator.
 
 - `Push Notifications` - When messages are received.
+
+## Repository overview
+
+```bash
+├── README.md
+├── app
+│   ├── assets
+│   ├── components
+│   ├── config
+│   └── screens
+├── .expo-shared
+│   ├── assets.json
+│   └── README.md
+├── App.js
+├── app.json
+├── babel.config.js
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
