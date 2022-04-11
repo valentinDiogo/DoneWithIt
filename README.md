@@ -46,10 +46,10 @@
 ```bash
 ├── README.md
 ├── app
-│   ├── assets
-│   ├── components
-│   ├── config
-│   └── screens
+│   ├── assets/
+│   ├── components/
+│   ├── config/
+│   └── screens/
 ├── .expo-shared
 │   ├── assets.json
 │   └── README.md
