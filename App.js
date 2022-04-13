@@ -2,6 +2,7 @@ import { useState } from "react";
 import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
 import Screen from "./app/components/Screen";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -12,16 +13,5 @@ const categories = [
 export default function App() {
   const [category, setCategory] = useState(categories[0]);
 
-  return (
-    <Screen>
-      <AppTextInput placeholder="Username" icon="email" />
-      <AppPicker
-        selectedItem={category}
-        onSelectItem={(item) => setCategory(item)}
-        placeholder="Category"
-        icon="apps"
-        items={categories}
-      />
-    </Screen>
-  );
+  return <LoginScreen />;
 }
