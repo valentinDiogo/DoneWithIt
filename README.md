@@ -41,22 +41,14 @@
 
 - `Push Notifications` - When messages are received.
 
-## Repository overview
+## Repository folders overview
 
 ```bash
-├── README.md
 ├── app
 │   ├── assets/
 │   ├── components/
 │   ├── config/
 │   └── screens/
-├── .expo-shared
-│   ├── assets.json
-│   └── README.md
-├── App.js
-├── app.json
-├── babel.config.js
-├── package-lock.json
-├── package.json
-└── tsconfig.json
+├── README.md
+└── App.js
 ```
