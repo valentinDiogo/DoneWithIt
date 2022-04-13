@@ -33,7 +33,7 @@
 
 - `Custom and Reusable Hooks` - Api, Auth, and Notifications.
 
-- `Form Validation` - Using Formik.
+- `Build Form and Form Validation` - Using Formik and Yup.
 
 - `Gesture Handler` - Swipe to delete, and pull to refresh.
 
