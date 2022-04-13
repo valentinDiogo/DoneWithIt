@@ -21,7 +21,7 @@
 
 - `Screens and reusable components` - Splash, Register, Login, Welcome, Account, Upload Listing, Listing Details and more. Button, Icon, Forms, Screen, Text, Text Input and more.
 
-- `Animation` - Using Lottie (Activity Indicator, done animation and more).
+- `Animation` - Using `Lottie` (Activity Indicator, done animation and more).
 
 - `Authentication` - User authentication (Register, Login/out) using `Jwt`.
 
@@ -33,11 +33,11 @@
 
 - `Custom and Reusable Hooks` - Api, Auth, and Notifications.
 
-- `Build Form and Form Validation` - Using Formik and Yup.
+- `Build Form and Form Validation` - Using `Formik` and `Yup`.
 
 - `Gesture Handler` - Swipe to delete, and pull to refresh.
 
-- `Navigation` - Using React Navigation and Stack Navigator.
+- `Navigation` - Using `React Navigation` and `Stack Navigator`.
 
 - `Push Notifications` - When messages are received.
 
