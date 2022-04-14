@@ -1,9 +1,11 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
 import { Form, FormField, SubmitButton } from "../components/forms";
+import AppText from "../components/Text";
+import colors from "../config/colors";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required().label("Name"),
@@ -11,9 +13,10 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required().min(4).label("Password"),
 });
 
-function RegisterScreen() {
+function RegisterScreen({ navigation }) {
   return (
     <Screen style={styles.container}>
+      <AppText style={styles.title}>Créer un compte</AppText>
       <Form
         initialValues={{ name: "", email: "", password: "" }}
         onSubmit={(values) => console.log(values)}
@@ -23,7 +26,7 @@ function RegisterScreen() {
           autoCorrect={false}
           icon="account"
           name="name"
-          placeholder="Name"
+          placeholder="Nom d'utilisateur"
         />
         <FormField
           autoCapitalize="none"
@@ -31,7 +34,7 @@ function RegisterScreen() {
           icon="email"
           keyboardType="email-address"
           name="email"
-          placeholder="Email"
+          placeholder="E-mail"
           textContentType="emailAddress"
         />
         <FormField
@@ -39,12 +42,20 @@ function RegisterScreen() {
           autoCorrect={false}
           icon="lock"
           name="password"
-          placeholder="Password"
+          placeholder="Mot de passe"
           secureTextEntry
           textContentType="password"
         />
-        <SubmitButton title="Register" />
+        <SubmitButton title="S'INSCRIRE" />
       </Form>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Login")}>
+        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+          <AppText style={styles.redirection}>
+            Vous avez déjà un compte ?
+          </AppText>
+          <AppText style={styles.link}> Connectez-vous !</AppText>
+        </View>
+      </TouchableWithoutFeedback>
     </Screen>
   );
 }
@@ -52,6 +63,24 @@ function RegisterScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 20,
+    textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "500",
+  },
+  redirection: {
+    fontSize: 16,
+    paddingVertical: 10,
+    textAlign: "center",
+  },
+  link: {
+    fontSize: 16,
+    paddingVertical: 10,
+    textAlign: "center",
+    color: colors.link,
   },
 });
 

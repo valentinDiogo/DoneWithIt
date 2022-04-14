@@ -14,7 +14,9 @@ function CategoryPickerItem({ item, onPress }) {
           size={80}
         />
       </TouchableOpacity>
-      <Text style={styles.label}>{item.label}</Text>
+      <Text textBreakStrategy={""} style={styles.label}>
+        {item.label}
+      </Text>
     </View>
   );
 }
@@ -27,9 +29,10 @@ const styles = StyleSheet.create({
     width: "33%",
   },
   label: {
-    marginTop: 5,
+    marginTop: 7,
+    fontWeight: "500",
     textAlign: "center",
-    fontSize: 17,
+    fontSize: 15,
   },
 });
 

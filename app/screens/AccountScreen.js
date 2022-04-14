@@ -4,26 +4,35 @@ import { StyleSheet, View, FlatList } from "react-native";
 import { ListItem, ListItemSeparator } from "../components/lists";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
+import routes from "../navigation/routes";
 import Screen from "../components/Screen";
 
 const menuItems = [
   {
-    title: "My Listings",
+    title: "Favoris",
     icon: {
-      name: "format-list-bulleted",
+      name: "heart",
       backgroundColor: colors.primary,
     },
   },
   {
-    title: "My Messages",
+    title: "Mes offres",
+    icon: {
+      name: "format-list-bulleted",
+      backgroundColor: colors.third,
+    },
+  },
+  {
+    title: "Messages",
     icon: {
       name: "email",
       backgroundColor: colors.secondary,
     },
+    targetScreen: routes.MESSAGES,
   },
 ];
 
-function AccountScreen(props) {
+function AccountScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
@@ -47,13 +56,14 @@ function AccountScreen(props) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
       </View>
       <ListItem
-        title="Log Out"
-        IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
+        title="Déconnexion"
+        IconComponent={<Icon name="logout" backgroundColor="#fbe470" />}
       />
     </Screen>
   );

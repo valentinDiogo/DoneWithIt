@@ -3,9 +3,11 @@ import { useFormikContext } from "formik";
 
 import Picker from "../Picker";
 import ErrorMessage from "./ErrorMessage";
+import AppText from "../Text";
 
 function AppFormPicker({
   items,
+  title,
   name,
   numberOfColumns,
   PickerItemComponent,
@@ -16,6 +18,9 @@ function AppFormPicker({
 
   return (
     <>
+      <AppText style={{ fontSize: 14, marginLeft: 3, fontWeight: "500" }}>
+        {title}
+      </AppText>
       <Picker
         items={items}
         numberOfColumns={numberOfColumns}

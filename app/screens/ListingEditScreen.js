@@ -25,31 +25,31 @@ const categories = [
   {
     backgroundColor: "#fc5c65",
     icon: "floor-lamp",
-    label: "Furniture",
+    label: "Maison",
     value: 1,
   },
   {
     backgroundColor: "#fd9644",
     icon: "car",
-    label: "Cars",
+    label: "Voiture",
     value: 2,
   },
   {
     backgroundColor: "#fed330",
     icon: "camera",
-    label: "Cameras",
+    label: "Photo & Vidéo",
     value: 3,
   },
   {
     backgroundColor: "#26de81",
     icon: "cards",
-    label: "Games",
+    label: "Jeux",
     value: 4,
   },
   {
     backgroundColor: "#2bcbba",
     icon: "shoe-heel",
-    label: "Clothing",
+    label: "Vêtement",
     value: 5,
   },
   {
@@ -61,25 +61,26 @@ const categories = [
   {
     backgroundColor: "#4b7bec",
     icon: "headphones",
-    label: "Movies & Music",
+    label: "Musique & Film",
     value: 7,
   },
   {
     backgroundColor: "#a55eea",
     icon: "book-open-variant",
-    label: "Books",
+    label: "Livre",
     value: 8,
   },
   {
     backgroundColor: "#778ca3",
     icon: "application",
-    label: "Other",
+    label: "Autres",
     value: 9,
   },
 ];
 
 function ListingEditScreen() {
   const location = useLocation();
+
   return (
     <Screen style={styles.container}>
       <Form
@@ -88,36 +89,45 @@ function ListingEditScreen() {
           price: "",
           description: "",
           category: null,
+          condition: "",
           images: [],
         }}
         onSubmit={(values) => console.log(location)}
         validationSchema={validationSchema}
       >
-        <FormImagePicker name="images" />
-        <FormField maxLength={255} name="title" placeholder="Title" />
+        <FormImagePicker title="Jusqu'à 10 photos" name="images" />
+        <FormField
+          title="Titre"
+          maxLength={255}
+          name="title"
+          placeholder="ex : Chemise en jean bleue"
+        />
         <FormField
           keyboardType="numeric"
+          title="Prix"
           maxLength={8}
           name="price"
-          placeholder="Price"
+          placeholder="€"
           width={120}
         />
         <Picker
           items={categories}
           name="category"
+          title="Catégorie"
           numberOfColumns={3}
           PickerItemComponent={CategoryPickerItem}
-          placeholder="Category"
+          placeholder="Choisir"
           width="50%"
         />
         <FormField
           maxLength={255}
           multiline
+          title="Décris ton article"
           name="description"
           numberOfLines={3}
-          placeholder="Description"
+          placeholder="ex : porté quelques fois, taille correctement, reversible"
         />
-        <SubmitButton title="Post" />
+        <SubmitButton title="Ajouter" />
       </Form>
     </Screen>
   );

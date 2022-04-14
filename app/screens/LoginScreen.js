@@ -1,16 +1,19 @@
 import React from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
 import { Form, FormField, SubmitButton } from "../components/forms";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import AppText from "../components/Text";
+import colors from "../config/colors";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(4).label("Password"),
 });
 
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo-red.png")} />
@@ -26,7 +29,7 @@ function LoginScreen(props) {
           icon="email"
           keyboardType="email-address"
           name="email"
-          placeholder="Email"
+          placeholder="E-mail"
           textContentType="emailAddress"
         />
         <FormField
@@ -34,12 +37,20 @@ function LoginScreen(props) {
           autoCorrect={false}
           icon="lock"
           name="password"
-          placeholder="Password"
+          placeholder="Mot de passe"
           secureTextEntry
           textContentType="password"
         />
-        <SubmitButton title="Login" />
+        <SubmitButton title="Connexion" />
       </Form>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Register")}>
+        <View style={{ flexDirection: "row", justifyContent: "center" }}>
+          <AppText style={styles.redirection}>
+            Vous n'avez pas de compte ?
+          </AppText>
+          <AppText style={styles.link}> Inscrivez-vous !</AppText>
+        </View>
+      </TouchableWithoutFeedback>
     </Screen>
   );
 }
@@ -47,12 +58,23 @@ function LoginScreen(props) {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    justifyContent: "center",
+  },
+  redirection: {
+    fontSize: 16,
+    paddingVertical: 10,
+    textAlign: "center",
+  },
+  link: {
+    fontSize: 16,
+    paddingVertical: 10,
+    textAlign: "center",
+    color: colors.link,
   },
   logo: {
     width: 80,
     height: 80,
     alignSelf: "center",
-    marginTop: 50,
     marginBottom: 20,
   },
 });

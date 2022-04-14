@@ -3,8 +3,9 @@ import { useFormikContext } from "formik";
 
 import ErrorMessage from "./ErrorMessage";
 import ImageInputList from "../ImageInputList";
+import AppText from "../Text";
 
-function FormImagePicker({ name }) {
+function FormImagePicker({ name, title }) {
   const { errors, setFieldValue, touched, values } = useFormikContext();
   const imageUris = values[name];
 
@@ -21,6 +22,9 @@ function FormImagePicker({ name }) {
 
   return (
     <>
+      <AppText style={{ fontSize: 14, marginLeft: 3, fontWeight: "500" }}>
+        {title}
+      </AppText>
       <ImageInputList
         imageUris={imageUris}
         onAddImage={handleAdd}
