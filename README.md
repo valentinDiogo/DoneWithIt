@@ -48,6 +48,8 @@
 │   ├── assets/
 │   ├── components/
 │   ├── config/
+│   ├── hooks/
+│   ├── navigation/
 │   └── screens/
 ├── README.md
 └── App.js
