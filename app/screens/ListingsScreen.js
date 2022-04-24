@@ -39,10 +39,12 @@ function ListingsScreen({ navigation }) {
           <Card
             title={item.title}
             subTitle={item.price + "€"}
-            imageUrl={item.images[0].url}
+            imageUrl={item.images.length > 0 ? item.images[0].url : null}
             onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />
         )}
+        refreshing={false}
+        onRefresh={loadListings}
       />
     </Screen>
   );

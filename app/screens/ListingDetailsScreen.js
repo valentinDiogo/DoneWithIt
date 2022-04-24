@@ -10,7 +10,12 @@ function ListingDetailsScreen({ route }) {
 
   return (
     <View>
-      <Image style={styles.image} source={listing.image} />
+      <Image
+        style={styles.image}
+        source={{
+          uri: listing.images.length > 0 ? listing.images[0].url : null,
+        }}
+      />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
         <Text style={styles.price}>{listing.price}€</Text>
@@ -18,7 +23,7 @@ function ListingDetailsScreen({ route }) {
           <ListItem
             image={require("../assets/mosh.jpg")}
             title="Mosh Hamedani"
-            subTitle="5 Listings"
+            subTitle="5 Offres"
           />
         </View>
       </View>
