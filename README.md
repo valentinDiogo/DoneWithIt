@@ -25,9 +25,9 @@
 
 - `Authentication` - User authentication (Register, Login/out) using `Jwt`.
 
-- `Verification` - Send verification email to verify user email using `nodemailer`
+- `Verification` - Send verification email to verify user email.
 
-- `Real time application` - Send and receive data using `Firebase Functions`
+- `Real time application` - Send and receive data using `Firebase Functions`.
 
 - `Cache Layer` - Caching Images.
 
