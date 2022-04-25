@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-    This repository consists of a <strong>React Native Marketplace Application</strong> built with <strong>Expo CLI</strong> and <strong>Server</Strong> build with <strong>NodeJs</strong> and <strong>MySQL</strong>.
+    This repository consists of a <strong>React Native Marketplace Application</strong> built with <strong>Expo CLI</strong> and <strong>Server</Strong> build with <strong>NodeJs</strong> and <strong>Firebase</strong>.
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 - `Verification` - Send verification email to verify user email using `nodemailer`
 
-- `Real time application` - Send and receive data using `Socket.io`
+- `Real time application` - Send and receive data using `Firebase Functions`
 
 - `Cache Layer` - Caching Images.
 
